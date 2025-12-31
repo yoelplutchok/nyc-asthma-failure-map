@@ -451,6 +451,27 @@ html, body {
     color: var(--text-primary);
 }
 
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.github-link svg {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.github-link:hover svg {
+    opacity: 1;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .header {
