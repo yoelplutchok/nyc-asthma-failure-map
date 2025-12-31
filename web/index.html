@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Childhood Asthma: The Prevention Failure Map</title>
+    
+    <!-- MapLibre GL JS -->
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>NYC Childhood Asthma</h1>
+            <p class="subtitle">The Prevention Failure Map</p>
+        </div>
+        <div class="header-stats" id="header-stats">
+            <div class="stat">
+                <span class="stat-value" id="stat-children">—</span>
+                <span class="stat-label">Children</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="stat-failure-zones">—</span>
+                <span class="stat-label">Failure Zones</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="stat-affected">—</span>
+                <span class="stat-label">Children at Risk</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Map Container -->
+        <div id="map" class="map-container"></div>
+
+        <!-- Legend -->
+        <div class="legend" id="legend">
+            <h3>Prevention Failure Index</h3>
+            <div class="legend-grid">
+                <div class="legend-axis legend-y-axis">
+                    <span>More ER Visits →</span>
+                </div>
+                <div class="legend-matrix">
+                    <div class="legend-cell" style="background: #be64ac;" data-class="3-1" tabindex="0" role="button" aria-label="High ER visits, High access"></div>
+                    <div class="legend-cell" style="background: #8c62aa;" data-class="3-2" tabindex="0" role="button" aria-label="High ER visits, Medium access"></div>
+                    <div class="legend-cell failure" style="background: #3b4994;" data-class="3-3" tabindex="0" role="button" aria-label="Failure Zone: High ER visits, Low access">
+                        <span class="legend-label">Failure Zone</span>
+                    </div>
+                    <div class="legend-cell" style="background: #dfb0d6;" data-class="2-1" tabindex="0" role="button" aria-label="Medium ER visits, High access"></div>
+                    <div class="legend-cell" style="background: #a5add3;" data-class="2-2" tabindex="0" role="button" aria-label="Medium ER visits, Medium access"></div>
+                    <div class="legend-cell" style="background: #5698b9;" data-class="2-3" tabindex="0" role="button" aria-label="Medium ER visits, Low access"></div>
+                    <div class="legend-cell best" style="background: #e8e8e8;" data-class="1-1" tabindex="0" role="button" aria-label="Best: Low ER visits, High access">
+                        <span class="legend-label">Best</span>
+                    </div>
+                    <div class="legend-cell" style="background: #ace4e4;" data-class="1-2" tabindex="0" role="button" aria-label="Low ER visits, Medium access"></div>
+                    <div class="legend-cell" style="background: #5ac8c8;" data-class="1-3" tabindex="0" role="button" aria-label="Low ER visits, Low access"></div>
+                </div>
+                <div class="legend-axis legend-x-axis">
+                    <span>← Less Access</span>
+                </div>
+            </div>
+            <div class="legend-toggle">
+                <label class="toggle">
+                    <input type="checkbox" id="toggle-providers">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Show Providers</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel" id="info-panel">
+            <div class="info-panel-header">
+                <h2 id="info-neighborhood">Select a neighborhood</h2>
+                <span class="info-borough" id="info-borough"></span>
+            </div>
+            <div class="info-panel-body" id="info-body">
+                <p class="info-prompt">Click on a neighborhood to see detailed statistics about asthma ER visits and specialist access.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Data Sources</h4>
+                <ul>
+                    <li>NYC DOHMH (ER Visits, 2023)</li>
+                    <li>CMS NPPES NPI Registry (Providers)</li>
+                    <li>US Census ACS 2022 (Population)</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>This map reveals where NYC's healthcare system fails children with asthma—neighborhoods with high emergency room visits and low access to preventive specialists.</p>
+            </div>
+            <div class="footer-section">
+                <a href="methodology.html" class="footer-link">Methodology →</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

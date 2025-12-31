@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology | NYC Childhood Asthma Prevention Failure Map</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .methodology-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .methodology-container h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .methodology-container h2 {
+            font-size: 1.25rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        .methodology-container h3 {
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-primary);
+        }
+        
+        .methodology-container p, .methodology-container li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .methodology-container ul, .methodology-container ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .methodology-container li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .data-table th, .data-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+        
+        .data-table th {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .data-table td {
+            color: var(--text-secondary);
+        }
+        
+        .callout {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+        }
+        
+        .callout.warning {
+            border-left-color: #f1c40f;
+        }
+        
+        .callout-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.2s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+        
+        code {
+            font-family: var(--font-mono);
+            background: var(--bg-card);
+            padding: 0.2rem 0.4rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875em;
+        }
+        
+        .stat-highlight {
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="methodology-container">
+        <a href="index.html" class="back-link">← Back to Map</a>
+        
+        <h1>Methodology</h1>
+        <p class="subtitle">How we identified NYC's childhood asthma prevention failure zones</p>
+        
+        <h2>Overview</h2>
+        <p>
+            This project identifies neighborhoods where NYC's healthcare system fails to prevent childhood asthma emergencies. 
+            We define a "prevention failure zone" as a neighborhood with <strong>high emergency room visit rates</strong> 
+            AND <strong>low access to preventive specialists</strong> (pediatric pulmonologists and allergists).
+        </p>
+        <p>
+            The visualization uses a bivariate choropleth map—a technique that shows two variables simultaneously using a 
+            3×3 color grid. This reveals spatial patterns that single-variable maps miss.
+        </p>
+        
+        <h2>Data Sources</h2>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Dataset</th>
+                    <th>Source</th>
+                    <th>Year</th>
+                    <th>Geography</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Asthma ED Visits</td>
+                    <td>NYC Department of Health and Mental Hygiene (DOHMH)</td>
+                    <td>2023</td>
+                    <td>UHF 42</td>
+                </tr>
+                <tr>
+                    <td>Healthcare Providers</td>
+                    <td>CMS National Plan & Provider Enumeration System (NPPES)</td>
+                    <td>2024</td>
+                    <td>Address-level</td>
+                </tr>
+                <tr>
+                    <td>Child Population</td>
+                    <td>US Census Bureau, American Community Survey</td>
+                    <td>2022 5-Year</td>
+                    <td>Census Tract → UHF 42</td>
+                </tr>
+                <tr>
+                    <td>Geographic Boundaries</td>
+                    <td>NYC DOHMH</td>
+                    <td>Current</td>
+                    <td>UHF 42</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>UHF 42 Neighborhoods</h3>
+        <p>
+            The United Hospital Fund (UHF) divides NYC into 42 neighborhoods for health planning purposes. 
+            This geography balances granularity with statistical reliability and is the standard unit for NYC health data.
+        </p>
+        
+        <h2>Provider Selection</h2>
+        <p>We identified providers who specialize in childhood respiratory conditions:</p>
+        <ul>
+            <li><strong>Pediatric Pulmonologists</strong> — Specialists in childhood lung diseases</li>
+            <li><strong>Pediatric Allergists</strong> — Specialists in allergic conditions including asthma triggers</li>
+            <li><strong>General Allergists</strong> — Many serve pediatric patients</li>
+        </ul>
+        <p>
+            Providers were queried from the NPI Registry using taxonomy descriptions. 
+            A total of <span class="stat-highlight">1,056 providers</span> were identified with NYC practice addresses.
+        </p>
+        
+        <h3>Geocoding & Assignment</h3>
+        <p>
+            Provider addresses were geocoded using the US Census Geocoder API, achieving a 
+            <span class="stat-highlight">97% success rate</span>. Geocoded locations were then 
+            spatially joined to UHF neighborhoods using GIS techniques.
+        </p>
+        
+        <h2>Bivariate Classification</h2>
+        <p>Each neighborhood is classified on two dimensions:</p>
+        
+        <h3>Dimension 1: ER Visit Rate</h3>
+        <p>
+            Asthma-related emergency department visits for children ages 5-17, expressed as a rate per 10,000 children.
+            Neighborhoods are divided into terciles:
+        </p>
+        <ul>
+            <li><strong>Low (1):</strong> 23.2 to 87.7 visits per 10,000</li>
+            <li><strong>Medium (2):</strong> 90.8 to 147.9 visits per 10,000</li>
+            <li><strong>High (3):</strong> 153.7 to 355.8 visits per 10,000</li>
+        </ul>
+        
+        <h3>Dimension 2: Specialist Access</h3>
+        <p>
+            The number of pediatric pulmonologists and allergists per 10,000 children in each neighborhood.
+            Neighborhoods are divided into terciles:
+        </p>
+        <ul>
+            <li><strong>High Access (1):</strong> 8.52 to 76.19 providers per 10,000</li>
+            <li><strong>Medium Access (2):</strong> 2.87 to 7.26 providers per 10,000</li>
+            <li><strong>Low Access (3):</strong> 0.00 to 2.77 providers per 10,000</li>
+        </ul>
+        
+        <div class="callout">
+            <div class="callout-title">Why Terciles?</div>
+            <p style="margin-bottom: 0;">
+                Terciles divide data into three equal groups, which maps naturally to a 3×3 bivariate color scheme.
+                This is more intuitive than quartiles or quintiles while still revealing meaningful variation.
+            </p>
+        </div>
+        
+        <h2>Failure Zone Definition</h2>
+        <p>
+            A neighborhood is classified as a <strong>Prevention Failure Zone</strong> if it falls in the 
+            highest tercile for ER visits (3) AND the lowest tercile for specialist access (3).
+            This corresponds to the deep blue color in the upper-right corner of the legend.
+        </p>
+        <p>
+            <span class="stat-highlight">4 neighborhoods</span> meet this criteria, containing 
+            <span class="stat-highlight">221,647 children</span> (12.8% of NYC's child population).
+        </p>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Neighborhood</th>
+                    <th>Borough</th>
+                    <th>ER Rate</th>
+                    <th>Providers/10k</th>
+                    <th>Children</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>High Bridge - Morrisania</td>
+                    <td>Bronx</td>
+                    <td>287.9</td>
+                    <td>2.65</td>
+                    <td>56,652</td>
+                </tr>
+                <tr>
+                    <td>Bedford Stuyvesant - Crown Heights</td>
+                    <td>Brooklyn</td>
+                    <td>259.1</td>
+                    <td>1.97</td>
+                    <td>71,124</td>
+                </tr>
+                <tr>
+                    <td>East New York</td>
+                    <td>Brooklyn</td>
+                    <td>215.1</td>
+                    <td>0.39</td>
+                    <td>50,989</td>
+                </tr>
+                <tr>
+                    <td>Northeast Bronx</td>
+                    <td>Bronx</td>
+                    <td>180.2</td>
+                    <td>1.63</td>
+                    <td>42,882</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Historical Redlining Analysis</h2>
+        <p>
+            We analyzed the relationship between historical redlining (1930s HOLC maps) and current childhood asthma outcomes.
+            The Home Owners' Loan Corporation (HOLC) graded neighborhoods from A ("Best") to D ("Hazardous"), with D-graded
+            areas—predominantly communities of color—systematically denied mortgage lending.
+        </p>
+
+        <h3>Key Findings</h3>
+        <ul>
+            <li><strong>Significant correlation:</strong> Neighborhoods with higher historical redlining have higher ER visit rates today
+                (r = 0.47, p = 0.002)</li>
+            <li><strong>Failure zones disproportionately affected:</strong> Prevention failure zones average 36.4% historically redlined area,
+                compared to 21.7% for other neighborhoods</li>
+        </ul>
+
+        <h3>Top 5 Historically Redlined Neighborhoods</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Neighborhood</th>
+                    <th>% Redlined</th>
+                    <th>ER Rate</th>
+                    <th>Failure Zone?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Union Square - Lower East Side</td>
+                    <td>69.9%</td>
+                    <td>159.7</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Williamsburg - Bushwick</td>
+                    <td>69.8%</td>
+                    <td>159.4</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Central Harlem - Morningside Heights</td>
+                    <td>69.8%</td>
+                    <td>345.8</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Bedford Stuyvesant - Crown Heights</td>
+                    <td>57.3%</td>
+                    <td>259.1</td>
+                    <td><strong>Yes</strong></td>
+                </tr>
+                <tr>
+                    <td>East Harlem</td>
+                    <td>50.4%</td>
+                    <td>355.8</td>
+                    <td>No</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout">
+            <div class="callout-title">Interpreting Redlining Correlation</div>
+            <p style="margin-bottom: 0;">
+                This correlation does not imply that redlining directly causes asthma. Rather, redlining created patterns of
+                disinvestment, housing deterioration, and environmental burden that persist today. These structural factors—not
+                the maps themselves—contribute to health disparities.
+            </p>
+        </div>
+
+        <h2>Limitations</h2>
+
+        <div class="callout warning">
+            <div class="callout-title">Important Caveats</div>
+            <ul style="margin-bottom: 0;">
+                <li><strong>Provider location ≠ Provider access.</strong> A specialist in a neighborhood may not accept Medicaid, have capacity for new patients, or be culturally accessible.</li>
+                <li><strong>Cross-boundary care.</strong> Patients often travel to specialists outside their neighborhood. Manhattan's high concentration serves patients citywide.</li>
+                <li><strong>Correlation ≠ Causation.</strong> High ER rates may reflect poverty, housing conditions, air quality, or other factors beyond specialist availability.</li>
+                <li><strong>Data currency.</strong> NPI data reflects registered addresses which may lag actual practice patterns.</li>
+                <li><strong>Suppressed values.</strong> Some ER rates are marked with asterisks in source data, indicating small numbers that may be unreliable.</li>
+            </ul>
+        </div>
+        
+        <h2>Reproducibility</h2>
+        <p>
+            This analysis was built with full reproducibility in mind. All code, data processing scripts, 
+            and documentation are available in the project repository. The pipeline uses:
+        </p>
+        <ul>
+            <li><code>Python 3.11</code> with <code>pandas</code>, <code>geopandas</code>, <code>shapely</code></li>
+            <li>Structured JSONL logging for full pipeline traceability</li>
+            <li>Atomic file writes with metadata sidecars</li>
+            <li>Configuration-driven parameters (no magic numbers in code)</li>
+        </ul>
+        
+        <h2>Future Work</h2>
+        <ul>
+            <li>Add insurance network participation data for "effective access" metric</li>
+            <li>Time-series analysis of ER rates and provider changes</li>
+            <li>Community-level validation with local health departments</li>
+            <li>Integrate housing quality data to strengthen the redlining-health pathway analysis</li>
+        </ul>
+        
+        <h2>Contact</h2>
+        <p>
+            Questions about methodology or data? Open an issue on the project's GitHub repository.
+        </p>
+        
+        <p style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.875rem;">
+            Last updated: December 2024
+        </p>
+    </div>
+</body>
+</html>
+

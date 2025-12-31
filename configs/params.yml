@@ -1,0 +1,74 @@
+# NYC Asthma Failure Map - Parameters
+# All magic numbers and thresholds go here
+
+# Geographic parameters
+geography:
+  primary_unit: "uhf42"
+  crs_wgs84: "EPSG:4326"
+  crs_projected: "EPSG:2263"  # NY State Plane
+
+# NPI API parameters
+npi_api:
+  base_url: "https://npiregistry.cms.hhs.gov/api/"
+  version: "2.1"
+  # API uses taxonomy_description for text search (not taxonomy codes)
+  taxonomy_descriptions:
+    pediatric_pulmonology: "Pediatric Pulmonology"
+    allergy_immunology: "Allergy & Immunology"
+    pediatrics: "Pediatrics"
+  # Keep codes for reference/validation
+  taxonomy_codes:
+    pediatric_pulmonology: "2080P0301X"
+    allergy_immunology: "207K00000X"
+    pediatrics: "208000000X"
+  cities:
+    - "NEW YORK"
+    - "BROOKLYN"
+    - "BRONX"
+    - "QUEENS"
+    - "STATEN ISLAND"
+    - "JAMAICA"
+    - "FLUSHING"
+    - "ASTORIA"
+  rate_limit_delay: 0.1  # seconds between API calls
+
+# Census API parameters
+census:
+  year: 2022
+  dataset: "acs/acs5"
+  nyc_counties:
+    bronx: "005"
+    brooklyn: "047"
+    manhattan: "061"
+    queens: "081"
+    staten_island: "085"
+  state_fips: "36"
+
+# Analysis parameters
+analysis:
+  tercile_method: "quantile"
+  min_child_population: 100
+
+# Bivariate color scheme (3x3 grid)
+# Format: "{er_class}-{access_class}"
+# Higher number = worse (3-3 is worst: high ER + low access)
+colors:
+  "3-3": "#3b4994"  # High ER, Low Access (worst - FAILURE ZONE)
+  "3-2": "#8c62aa"
+  "3-1": "#be64ac"
+  "2-3": "#5698b9"
+  "2-2": "#a5add3"
+  "2-1": "#dfb0d6"
+  "1-3": "#5ac8c8"
+  "1-2": "#ace4e4"
+  "1-1": "#e8e8e8"  # Low ER, High Access (best)
+
+# Web visualization
+web:
+  map_center:
+    lat: 40.75
+    lon: -73.95
+  initial_zoom: 10
+  max_zoom: 14
+  min_zoom: 9
+

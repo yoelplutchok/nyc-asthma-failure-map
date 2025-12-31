@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Data (keep structure, ignore contents)
+data/raw/*
+data/processed/*
+data/final/*
+!data/**/.gitkeep
+!data/**/ACQUISITION.md
+
+# Keep geo boundaries if small enough to version
+!data/geo/uhf42_boundaries.geojson
+!data/geo/nyc_holc_redlining.geojson
+# Ignore duplicate/temp geojson files
+data/geo/geojson*.json
+
+# Logs
+logs/*.log
+logs/*.jsonl
+
+# API keys
+*.key
+secrets.yml
+.env.local
+
+# Web build artifacts (keep source)
+web/data/*.geojson
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Conda lock file (optional to version)
+# environment.lock.yml
+
+# Claude/Cursor AI files (internal development docs)
+.claude/
+prevention_failure_map_execution_plan.md
+
+# Web data files (generated)
+web/data/*.json
+
