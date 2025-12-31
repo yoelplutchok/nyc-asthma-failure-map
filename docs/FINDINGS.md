@@ -18,7 +18,7 @@ This analysis reveals **4 Prevention Failure Zones** in New York City—neighbor
 | **Northeast Bronx** | Bronx | 180.2 | 1.63 | 42,882 |
 
 ### Key Observations:
-- **East New York** has the lowest specialist access in the city (0.39 per 10,000)—essentially 2 specialists for 51,000 children
+- **East New York** has the lowest specialist access in the city (0.39 per 10,000), essentially 2 specialists for 51,000 children
 - **High Bridge - Morrisania** has the highest ER rate (287.9)—more than double the citywide average
 - All failure zones are in the **Bronx or Brooklyn**—none in Manhattan, Queens, or Staten Island
 
@@ -45,7 +45,7 @@ Both differences are statistically significant at the 99% confidence level.
 
 ### Historical Discrimination Predicts Current Health Outcomes
 
-We analyzed the overlap between today's asthma failure zones and neighborhoods that were "redlined" (marked as hazardous for lending) in the 1930s.
+I analyzed the overlap between today's asthma failure zones and neighborhoods that were "redlined" (marked as hazardous for lending) in the 1930s.
 
 | Zone Type | % Historically Redlined |
 |-----------|------------------------|
@@ -99,7 +99,7 @@ Kids in failure zones are more likely to:
 - Face longer travel times to reach appropriate providers
 
 ### For the Healthcare System
-- ER visits are expensive—preventive care is cheaper
+- ER visits are expensive, and preventive care is cheaper
 - Specialist shortages in underserved areas persist despite overall provider growth
 - Geographic maldistribution of providers compounds health inequity
 
@@ -113,13 +113,13 @@ Kids in failure zones are more likely to:
 
 ## Limitations of These Findings
 
-1. **Association, not causation**: We cannot prove that low specialist access *causes* high ER visits—other factors (poverty, housing quality, air pollution) likely play major roles
+1. **Association, not causation**: We cannot prove that low specialist access *causes* high ER visits; other factors (poverty, housing quality, air pollution) likely play significant roles
 
 2. **Provider location ≠ true access**: A specialist in a neighborhood may not accept Medicaid, be taking new patients, or have short wait times
 
-3. **Cross-neighborhood care**: Many patients travel to Manhattan for specialty care—neighborhood counts don't capture this
+3. **Cross-neighborhood care**: Many patients travel to Manhattan for specialty care; neighborhood counts don't capture this
 
-4. **No direct ER-to-Provider correlation**: At the neighborhood level, we found no significant correlation (r = -0.035, p = 0.83) between provider rates and ER rates—suggesting other factors dominate
+4. **No direct ER-to-Provider correlation**: At the neighborhood level, I found no significant correlation (r = -0.035, p = 0.83) between provider rates and ER rates, suggesting other factors dominate
 
 ---
 
