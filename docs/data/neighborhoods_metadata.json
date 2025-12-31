@@ -1,0 +1,17 @@
+{
+  "_generated": "2025-12-31T01:50:53.607761+00:00",
+  "_script": "06_export_for_web.py",
+  "_run_id": "20251231_015053_525794bb",
+  "_version": "0.1.0",
+  "description": "Web-ready GeoJSON for interactive map visualization",
+  "inputs": [
+    "data/final/uhf_classified.geojson",
+    "data/processed/providers_geocoded.csv"
+  ],
+  "row_count": 42,
+  "output_files": [
+    "/Users/yoelplutchok/Desktop/nyc-asthma-failure-map/web/data/neighborhoods.geojson",
+    "/Users/yoelplutchok/Desktop/nyc-asthma-failure-map/web/data/providers.geojson",
+    "/Users/yoelplutchok/Desktop/nyc-asthma-failure-map/web/data/stats.json"
+  ]
+}

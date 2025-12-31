@@ -1,0 +1,93 @@
+{
+  "total_neighborhoods": 42,
+  "total_children": 1733977,
+  "total_providers": 996,
+  "citywide_er_rate": 133.0,
+  "citywide_provider_rate": 8.67,
+  "failure_zones": {
+    "count": 4,
+    "children": 221647,
+    "avg_er_rate": 235.6,
+    "avg_provider_rate": 1.66,
+    "neighborhoods": [
+      {
+        "uhf_code": 102,
+        "uhf_name": "Northeast Bronx",
+        "borough": "Bronx"
+      },
+      {
+        "uhf_code": 106,
+        "uhf_name": "High Bridge - Morrisania",
+        "borough": "Bronx"
+      },
+      {
+        "uhf_code": 203,
+        "uhf_name": "Bedford Stuyvesant - Crown Heights",
+        "borough": "Brooklyn"
+      },
+      {
+        "uhf_code": 204,
+        "uhf_name": "East New York",
+        "borough": "Brooklyn"
+      }
+    ]
+  },
+  "best_zones": {
+    "count": 4,
+    "children": 94354,
+    "avg_er_rate": 43.5,
+    "avg_provider_rate": 18.29,
+    "neighborhoods": [
+      {
+        "uhf_code": 305,
+        "uhf_name": "Upper East Side",
+        "borough": "Manhattan"
+      },
+      {
+        "uhf_code": 308,
+        "uhf_name": "Greenwich Village - Soho",
+        "borough": "Manhattan"
+      },
+      {
+        "uhf_code": 403,
+        "uhf_name": "Flushing - Clearview",
+        "borough": "Queens"
+      },
+      {
+        "uhf_code": 503,
+        "uhf_name": "Willowbrook",
+        "borough": "Staten Island"
+      }
+    ]
+  },
+  "extremes": {
+    "highest_er_rate": {
+      "value": 355.8,
+      "neighborhood": "East Harlem"
+    },
+    "lowest_er_rate": {
+      "value": 23.2,
+      "neighborhood": "South Beach - Tottenville"
+    },
+    "highest_provider_rate": {
+      "value": 76.19,
+      "neighborhood": "Gramercy Park -  Murray Hill"
+    },
+    "lowest_provider_rate": {
+      "value": 0.0,
+      "neighborhood": "Bayside - Little Neck"
+    }
+  },
+  "color_scheme": {
+    "3-3": "#3b4994",
+    "3-2": "#8c62aa",
+    "3-1": "#be64ac",
+    "2-3": "#5698b9",
+    "2-2": "#a5add3",
+    "2-1": "#dfb0d6",
+    "1-3": "#5ac8c8",
+    "1-2": "#ace4e4",
+    "1-1": "#e8e8e8"
+  },
+  "data_year": 2023
+}
