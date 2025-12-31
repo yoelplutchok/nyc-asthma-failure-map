@@ -2,7 +2,7 @@
 
 ## Summary
 
-This analysis reveals **4 Prevention Failure Zones** in New York City—neighborhoods where children face the worst combination of high asthma emergency room visits and low access to preventive specialists.
+This analysis reveals **4 Prevention Failure Zones** in New York City neighborhoods where children face the worst combination of high asthma emergency room visits and low access to preventive specialists.
 
 **221,647 children** (12.8% of NYC's child population) live in these failure zones.
 
@@ -19,8 +19,8 @@ This analysis reveals **4 Prevention Failure Zones** in New York City—neighbor
 
 ### Key Observations:
 - **East New York** has the lowest specialist access in the city (0.39 per 10,000), essentially 2 specialists for 51,000 children
-- **High Bridge - Morrisania** has the highest ER rate (287.9)—more than double the citywide average
-- All failure zones are in the **Bronx or Brooklyn**—none in Manhattan, Queens, or Staten Island
+- **High Bridge - Morrisania** has the highest ER rate (287.9), more than double the citywide average
+- All failure zones are in the **Bronx or Brooklyn**, none in Manhattan, Queens, or Staten Island
 
 ---
 
@@ -34,8 +34,8 @@ This analysis reveals **4 Prevention Failure Zones** in New York City—neighbor
 | Mean Provider Rate | **1.66** | 9.41 | 82% lower |
 
 **Welch's t-test results:**
-- ER rate difference: t = 4.14, **p = 0.008** ✓
-- Provider rate difference: t = -3.42, **p = 0.001** ✓
+- ER rate difference: t = 4.14, **p = 0.008** 
+- Provider rate difference: t = -3.42, **p = 0.001** 
 
 Both differences are statistically significant at the 99% confidence level.
 
