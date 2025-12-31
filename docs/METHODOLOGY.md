@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project identifies NYC neighborhoods where the healthcare system fails children with asthma—areas with **high emergency room visit rates** combined with **low access to preventive specialists**.
+This project identifies NYC neighborhoods where the healthcare system fails children with asthma, areas with **high emergency room visit rates** combined with **low access to preventive specialists**.
 
 ## Data Sources
 
@@ -16,7 +16,7 @@ This project identifies NYC neighborhoods where the healthcare system fails chil
 
 ## Geographic Unit
 
-We use **UHF 42 neighborhoods**—the standard geography for NYC health data. This divides the city into 42 neighborhoods that balance granularity with statistical reliability.
+I use **UHF 42 neighborhoods**, which is the standard geography for NYC health data. This divides the city into 42 neighborhoods that balance granularity with statistical reliability.
 
 ## Bivariate Classification
 
@@ -41,7 +41,7 @@ This is the deep blue color in the upper-right corner of the legend.
 
 ## Provider Selection
 
-We queried the NPI Registry for:
+I queried the NPI Registry for:
 - Pediatric Pulmonologists
 - Pediatric Allergists  
 - General Allergists (many serve children)
@@ -50,7 +50,7 @@ We queried the NPI Registry for:
 
 ## Statistical Validation
 
-We used **Welch's t-test** (robust to unequal variance) to compare failure zones vs other neighborhoods:
+I used **Welch's t-test** (robust to unequal variance) to compare failure zones vs other neighborhoods:
 
 | Metric | Failure Zones | Other Zones | p-value |
 |--------|---------------|-------------|---------|
