@@ -108,9 +108,9 @@ The visualization uses a **bivariate choropleth map**, a technique that shows tw
 - **Y-axis**: ER visit rate (visits per 10,000 children)
 - **Failure zones**: High ER + Low Access (deep blue, upper-right)
 
- **[Read the full methodology →](docs/METHODOLOGY.md)**
+ **[Read the full methodology →](docs/docs/METHODOLOGY.md)**
 
- **[See detailed findings →](docs/FINDINGS.md)**
+ **[See detailed findings →](docs/docs/FINDINGS.md)**
 
 ## Reproducibility
 
