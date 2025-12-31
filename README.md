@@ -102,7 +102,7 @@ nyc-asthma-failure-map/
 
 ## Methodology
 
-The visualization uses a **bivariate choropleth map**—a technique that shows two variables simultaneously using a 3×3 color grid:
+The visualization uses a **bivariate choropleth map**, a technique that shows two variables simultaneously using a 3×3 color grid:
 
 - **X-axis**: Specialist access (providers per 10,000 children)
 - **Y-axis**: ER visit rate (visits per 10,000 children)
