@@ -1,6 +1,6 @@
 # NYC Childhood Asthma Prevention Failure Map
 
-An interactive bivariate choropleth map revealing where New York City's healthcare system fails children with asthma—neighborhoods with high emergency room visit rates and low access to preventive specialists.
+An interactive bivariate choropleth map revealing where New York City's healthcare system fails children with asthma in neighborhoods with high emergency room visit rates and low access to preventive specialists.
 
 ![Map Screenshot](docs/screenshot.png)
 
@@ -108,9 +108,9 @@ The visualization uses a **bivariate choropleth map**—a technique that shows t
 - **Y-axis**: ER visit rate (visits per 10,000 children)
 - **Failure zones**: High ER + Low Access (deep blue, upper-right)
 
-📄 **[Read the full methodology →](docs/METHODOLOGY.md)**
+ **[Read the full methodology →](docs/METHODOLOGY.md)**
 
-📊 **[See detailed findings →](docs/FINDINGS.md)**
+ **[See detailed findings →](docs/FINDINGS.md)**
 
 ## Reproducibility
 
